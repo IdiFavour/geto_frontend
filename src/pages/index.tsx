@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from "next/image";
 
 import styles from "@/styles/Home.module.css";
+import Login from "../../components/Login";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
                     className={(styles.icon, styles.dribbble_logo)}
                   >
                     <title id="attk66qyihqg61ipiwnvb8hm968vfeo2">
-                      Dribbble: the community for graphic design
+                      Geto: the community for graphic design
                     </title>
                     <path
                       fill-rule="evenodd"
@@ -35,16 +36,13 @@ export default function Home() {
                     ></path>
                   </svg>
                 </a>
-                <h1>Discover the world’s top Designers &amp; Creatives.</h1>
+                <h1>
+                  Discover and Connect with the Hottest events &amp; Gathering
+                  in town.
+                </h1>
               </header>
               <div className={styles.artwork}>
                 <div className={styles.artwork_image}></div>
-                <p className={styles.artwork_attribution}>
-                  Art by
-                  <a className="url" rel="contact" href="/karicca">
-                    Irina Valeeva
-                  </a>
-                </p>
               </div>
             </div>
           </section>
@@ -55,7 +53,9 @@ export default function Home() {
               </p>
             </nav>
             <div className={styles.main}>
-              <div className={styles.auth_content}>sign in</div>
+              <div className={styles.auth_content}>
+                <Login />
+              </div>
             </div>
           </section>
         </div>
