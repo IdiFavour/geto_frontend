@@ -1,0 +1,408 @@
+
+.sign_in {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #0d0c22;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+}
+
+
+@media (min-width: 960px) {
+    .main_container {
+        display:-ms-flexbox;
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden
+    }
+}
+
+.auth_sidebar {
+    position: relative;
+    color: #000
+}
+
+@media (min-width: 960px) {
+    .auth_sidebar {
+        -ms-flex-positive:0;
+        flex-grow: 0;
+        width: 450px
+    }
+
+    .sign_in .auth_sidebar,.forgot_password .auth_sidebar,.reset_password .auth_sidebar {
+        background: #f1cdd7;
+        color: #865c6c
+    }
+
+    .sign_up .auth_sidebar,.connect_with_application .auth_sidebar {
+        background: #f2d184;
+        color: #866118
+    }
+}
+
+@media (min-width: 1100px) {
+    .auth_sidebar {
+        width:514px;
+    }
+}
+
+@media (min-width: 960px) {
+    .auth_sidebar .auth_sidebar_content {
+        display:-ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        height: 100%
+    }
+}
+
+.auth_sidebar a {
+    color: inherit;
+    text-decoration: underline
+}
+
+.auth_sidebar header {
+    max-width: 416px;
+    margin: 0 auto;
+    padding: 48px 20px 0;
+    text-align: left
+}
+
+@media (min-width: 960px) {
+    .auth_sidebar header {
+        max-width:100%;
+        margin: 0;
+        padding: 40px 40px 30px
+    }
+}
+
+@media (min-width: 1100px) {
+    .auth_sidebar header {
+        padding:64px 64px 30px
+    }
+}
+
+.auth_sidebar header .logo {
+    display: block;
+    margin-bottom: 30px
+}
+
+
+
+@media (min-width: 960px) {
+    .auth_sidebar header .logo {
+        opacity:0.7
+    }
+
+    .auth_sidebar header .logo:hover {
+        opacity: 0.9
+    }
+}
+
+.auth_sidebar header .dribbble_logo {
+    width: 90px;
+    height: auto;
+    fill: currentColor;
+    color: inherit
+}
+
+.auth_sidebar header h1 {
+    display: none;
+    color: inherit;
+    font: bold 32px/38px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+@media (min-width: 960px) {
+    .auth_sidebar header h1 {
+        display:block;
+        padding-right: 30px
+    }
+}
+
+@media (max-height: 850px) {
+    .auth_sidebar header h1 {
+        font-size:25px;
+        line-height: 30px
+    }
+}
+
+.auth_sidebar .artwork {
+    display: none
+}
+
+@media (min-width: 960px) {
+    .auth_sidebar .artwork {
+        display:-ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -ms-flex-pack: end;
+        justify-content: flex-end
+    }
+}
+
+.auth_sidebar .artwork .artwork_image {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover
+}
+
+@media (max-width: 961px), (max-height: 730px) {
+    .auth_sidebar .artwork .artwork_image {
+        display:none
+    }
+}
+
+@media (min-height: 960px) {
+    .auth_sidebar .artwork .artwork_image {
+        max-height:70%
+    }
+}
+
+.sign_in .auth_sidebar .artwork .artwork_image,.forgot_password .auth_sidebar .artwork .artwork_image,.reset_password .auth_sidebar .artwork .artwork_image {
+    background-image: url(https://cdn.dribbble.com/assets/auth/sign-in-a63d9cf6c1f626ccbde669c582b10457b07523adb58c2a4b46833b7b4925d9a3.jpg)
+}
+
+.connect_with_application .auth_sidebar .artwork .artwork_image,.sign_up .auth_sidebar .artwork .artwork_image {
+    background-image: url(/assets/auth/sign-up-2b63dbffcc69046adb0ec414be26771ce10d91a8f9b4de7c281bcbee9e95d9f9.png)
+}
+
+.auth_sidebar .artwork .artwork_attribution {
+    margin: 0;
+    padding: 25px 64px 35px;
+    color: inherit;
+    font-size: 14px;
+    line-height: 14px
+}
+
+@media (max-width: 961px), (max-height: 730px) {
+    .auth_sidebar .artwork .artwork_attribution {
+        display:none
+    }
+}
+
+.content {
+    width: 100%
+}
+
+@media (min-width: 960px) {
+    .content {
+        display:-ms-flexbox;
+        display: flex;
+        -ms-flex: 1;
+        flex: 1;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        overflow: auto
+    }
+}
+
+.auth_nav {
+    display: none;
+    position: relative
+}
+
+@media (min-width: 960px) {
+    .auth_nav {
+        display:-ms-flexbox;
+        display: flex;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        padding: 30px 30px 0
+    }
+
+    .auth_nav p {
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        margin: 0;
+        text-align: right
+    }
+
+    .auth_nav .back_link {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        color: #6e6d7a
+    }
+
+    .auth_nav .back_link:hover {
+        border-color: #dbdbde;
+        color: #0d0c22
+    }
+
+    .auth_nav .back_link svg {
+        width: 16px;
+        height: auto;
+        fill: currentColor
+    }
+}
+
+.main {
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+@media (min-width: 960px) {
+    .main {
+        display:-ms-flexbox;
+        display: flex;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0
+    }
+}
+
+.auth_content {
+    width: 100%;
+    max-width: 416px;
+    margin: auto
+}
+
+@media (min-width: 960px) {
+    .auth_content {
+        margin:0;
+        padding: 30px 60px 0
+    }
+}
+
+.google_connect_btn {
+    min-width: 250px
+}
+
+.g_recaptcha {
+    height: 65px
+}
+
+.auth_link_mobile {
+    text-align: center
+}
+
+@media (min-width: 960px) {
+    .auth_link_mobile {
+        display:none
+    }
+}
+
+.grecaptcha_badge {
+    visibility: hidden;
+    border: 1px solid #ff0000
+}
+
+.recaptcha_terms {
+    max-width: 300px;
+    color: #9e9ea7;
+    font: normal 11px/16px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.password_instructions {
+    margin-bottom: 26px
+}
+
+.hide {
+    display: none
+}
+
+.auth_confirmation_field .confirm_identity_label {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 12px;
+    font-weight: bold
+}
+
+.auth_register_container,.auth_connect_account_container {
+    display: none
+}
+
+@media (min-width: 960px) {
+    .connect_with_application .main {
+        -ms-flex-align:stretch;
+        align-items: stretch;
+        margin: 80px 0 0
+    }
+}
+
+.connect_with_application.show_register_container .auth_register_container {
+    display: block
+}
+
+.connect_with_application.show_connect_account_container .auth_connect_account_container {
+    display: block
+}
+
+.auth_connections {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 40px
+}
+
+.auth_connections .auth_google {
+    position: relative;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+
+.auth_connections a.auth_twitter {
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    margin-left: 10px
+}
+
+@media (min-width: 400px) {
+    .auth_connections a.auth_twitter {
+        margin-left:16px
+    }
+}
+
+.auth_connections .auth_google_form {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%
+}
+
+.auth_twitter,a.auth-twitter,a.form_btn.auth_twitter {
+    background-color: #f2f2f2;
+    color: #6e6d7a
+}
+
+.auth_twitter:hover,a.auth_twitter:hover,a.form_btn.auth_twitter:hover {
+    background-color: #e5e5e5
+}
+
+.auth_twitter:active,a.auth_twitter:active,a.form_btn.auth_twitter:active {
+    background-color: #d9d9d9
+}
+
+div.sign_connections_full a.alt_link {
+    display: block;
+    margin: 12px 0 0;
+    font-size: 1.2em
+}
